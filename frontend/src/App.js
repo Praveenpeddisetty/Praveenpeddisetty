@@ -6,6 +6,20 @@ import UserTypeSelection from "./screens/UserTypeSelection";
 import Login from "./screens/Login";
 import Registration from "./screens/Registration";
 import OTPVerification from "./screens/OTPVerification";
+import ConsumerHome from "./screens/consumer/ConsumerHome";
+import SearchBrowse from "./screens/consumer/SearchBrowse";
+import FilterScreen from "./screens/consumer/FilterScreen";
+import DesignDetail from "./screens/consumer/DesignDetail";
+import WorkerProfile from "./screens/consumer/WorkerProfile";
+import OrderCustomization from "./screens/consumer/OrderCustomization";
+import OrderConfirmation from "./screens/consumer/OrderConfirmation";
+import MyOrders from "./screens/consumer/MyOrders";
+import OrderTracking from "./screens/consumer/OrderTracking";
+import ChatScreen from "./screens/consumer/ChatScreen";
+import Wishlist from "./screens/consumer/Wishlist";
+import RateReview from "./screens/consumer/RateReview";
+import Notifications from "./screens/consumer/Notifications";
+import ConsumerProfile from "./screens/consumer/ConsumerProfile";
 
 function App() {
   return (
@@ -18,6 +32,22 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/otp-verify" element={<OTPVerification />} />
+          
+          {/* Consumer Routes */}
+          <Route path="/consumer-home" element={<ConsumerHome />} />
+          <Route path="/search" element={<SearchBrowse />} />
+          <Route path="/filter" element={<FilterScreen />} />
+          <Route path="/design/:id" element={<DesignDetail />} />
+          <Route path="/worker/:id" element={<WorkerProfile />} />
+          <Route path="/customize/:id" element={<OrderCustomization />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
+          <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="/order-tracking/:id" element={<OrderTracking />} />
+          <Route path="/chat/:id" element={<ChatScreen />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/rate-review/:id" element={<RateReview />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/consumer-profile" element={<ConsumerProfile />} />
         </Routes>
       </BrowserRouter>
     </div>

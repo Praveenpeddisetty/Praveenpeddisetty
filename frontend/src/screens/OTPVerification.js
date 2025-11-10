@@ -1,12 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const OTPVerification = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const phone = location.state?.phone || '98765 43210';
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [timer, setTimer] = useState(45);
+  const [error, setError] = useState('');
   const inputRefs = useRef([]);
+
+  const CORRECT_OTP = '123456'; // Default OTP for testing
 
   useEffect(() => {
     // Start countdown timer
@@ -24,6 +29,7 @@ const OTPVerification = () => {
     const newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
+    setError('');
 
     // Auto-focus next input
     if (value && index < 5) {
@@ -51,13 +57,20 @@ const OTPVerification = () => {
   };
 
   const handleVerify = () => {
-    // Verify OTP and navigate
-    console.log('OTP:', otp.join(''));
+    const enteredOtp = otp.join('');
+    
+    if (enteredOtp === CORRECT_OTP) {
+      // OTP verified successfully, navigate to consumer home
+      navigate('/consumer-home');
+    } else {
+      setError('Invalid OTP. Please try again. (Use 123456 for testing)');
+    }
   };
 
   const handleResend = () => {
     setTimer(45);
     setOtp(['', '', '', '', '', '']);
+    setError('');
     inputRefs.current[0]?.focus();
   };
 

@@ -24,7 +24,7 @@ const Wishlist = () => {
           <ArrowLeft size={24} />
         </button>
         <h1 style={styles.title}>My Wishlist</h1>
-        <span style={styles.count} data-testid="wishlist-count"}>{items.length}</span>
+        <span style={styles.count} data-testid="wishlist-count">{items.length}</span>
       </div>
 
       {/* Scrollable Content */}

@@ -147,49 +147,10 @@ const styles = {
   phoneInput: {
     flex: 1,
   },
-  passwordWrapper: {
-    position: 'relative',
-  },
-  passwordInput: {
-    paddingRight: '48px',
-  },
-  eyeButton: {
-    position: 'absolute',
-    right: '12px',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    background: 'transparent',
-    border: 'none',
-    cursor: 'pointer',
-    color: '#666',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  optionsRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: '24px',
-  },
-  checkboxLabel: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    fontSize: '14px',
-    color: '#333',
-    cursor: 'pointer',
-  },
-  checkbox: {
-    width: '18px',
-    height: '18px',
-    cursor: 'pointer',
-  },
-  forgotLink: {
-    fontSize: '14px',
-  },
   loginButton: {
     width: '100%',
     marginBottom: '20px',
+    marginTop: '8px',
   },
   divider: {
     display: 'flex',
@@ -215,10 +176,18 @@ const styles = {
     width: '20px',
     height: '20px',
   },
-  signupText: {
-    textAlign: 'center',
-    fontSize: '14px',
+  infoBox: {
+    background: '#f8f9fa',
+    borderRadius: '8px',
+    padding: '12px',
+    marginTop: '12px',
+  },
+  infoText: {
+    fontSize: '12px',
     color: '#666',
+    textAlign: 'center',
+    lineHeight: '1.5',
+    margin: 0,
   },
 };
 

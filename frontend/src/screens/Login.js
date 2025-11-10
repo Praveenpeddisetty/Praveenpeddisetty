@@ -1,18 +1,17 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Eye, EyeOff, Phone } from 'lucide-react';
+import { ArrowLeft, Phone } from 'lucide-react';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
   const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleSendOTP = (e) => {
     e.preventDefault();
-    // Navigate to OTP verification
-    navigate('/otp-verify');
+    if (phone.length >= 10) {
+      // Navigate to OTP verification with phone number
+      navigate('/otp-verify', { state: { phone } });
+    }
   };
 
   return (
@@ -29,11 +28,11 @@ const Login = () => {
 
       <div style={styles.content}>
         <div style={styles.titleSection}>
-          <h1 style={styles.title} data-testid="login-title">Welcome Back</h1>
-          <p style={styles.subtitle} data-testid="login-subtitle">Sign in to continue</p>
+          <h1 style={styles.title} data-testid="login-title">Welcome to Golden Gehna</h1>
+          <p style={styles.subtitle} data-testid="login-subtitle">Login with your mobile number</p>
         </div>
 
-        <form onSubmit={handleLogin} style={styles.form}>
+        <form onSubmit={handleSendOTP} style={styles.form}>
           <div className="input-group">
             <label className="input-label" htmlFor="phone">Phone Number</label>
             <div style={styles.phoneInputWrapper}>
@@ -45,59 +44,21 @@ const Login = () => {
                 style={styles.phoneInput}
                 placeholder="Enter your phone number"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                 data-testid="phone-input"
+                required
               />
             </div>
-          </div>
-
-          <div className="input-group">
-            <label className="input-label" htmlFor="password">Password</label>
-            <div style={styles.passwordWrapper}>
-              <input
-                id="password"
-                type={showPassword ? 'text' : 'password'}
-                className="input-field"
-                style={styles.passwordInput}
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                data-testid="password-input"
-              />
-              <button
-                type="button"
-                style={styles.eyeButton}
-                onClick={() => setShowPassword(!showPassword)}
-                data-testid="toggle-password"
-              >
-                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-              </button>
-            </div>
-          </div>
-
-          <div style={styles.optionsRow}>
-            <label style={styles.checkboxLabel}>
-              <input
-                type="checkbox"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                style={styles.checkbox}
-                data-testid="remember-me-checkbox"
-              />
-              <span>Remember me</span>
-            </label>
-            <a href="#" style={styles.forgotLink} data-testid="forgot-password-link">
-              Forgot Password?
-            </a>
           </div>
 
           <button
             type="submit"
             className="btn-primary"
             style={styles.loginButton}
-            data-testid="login-button"
+            data-testid="send-otp-button"
+            disabled={phone.length < 10}
           >
-            Login
+            Send OTP
           </button>
 
           <div style={styles.divider}>
@@ -118,19 +79,11 @@ const Login = () => {
             Continue with Google
           </button>
 
-          <p style={styles.signupText}>
-            Don't have an account?{' '}
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                navigate('/register');
-              }}
-              data-testid="signup-link"
-            >
-              Sign Up
-            </a>
-          </p>
+          <div style={styles.infoBox}>
+            <p style={styles.infoText}>
+              By continuing, you agree to our Terms & Conditions and Privacy Policy
+            </p>
+          </div>
         </form>
       </div>
     </div>

@@ -114,6 +114,19 @@ const styles = {
     height: '100%',
     textAlign: 'center',
   },
+  logoContainer: {
+    width: '200px',
+    height: '200px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: '32px',
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain',
+  },
   iconContainer: {
     width: '140px',
     height: '140px',

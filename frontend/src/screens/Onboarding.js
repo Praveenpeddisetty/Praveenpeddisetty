@@ -50,7 +50,17 @@ const Onboarding = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div style={styles.slide}>
-              <div style={styles.iconContainer} data-testid={`slide-icon-${index}`}>{slide.icon}</div>
+              {slide.isLogo ? (
+                <div style={styles.logoContainer} data-testid={`slide-logo-${index}`}>
+                  <img 
+                    src={slide.logoUrl} 
+                    alt="Golden Gehna Logo" 
+                    style={styles.logoImage}
+                  />
+                </div>
+              ) : (
+                <div style={styles.iconContainer} data-testid={`slide-icon-${index}`}>{slide.icon}</div>
+              )}
               <h2 style={styles.slideTitle} data-testid={`slide-title-${index}`}>{slide.title}</h2>
               <p style={styles.slideDescription} data-testid={`slide-description-${index}`}>{slide.description}</p>
             </div>

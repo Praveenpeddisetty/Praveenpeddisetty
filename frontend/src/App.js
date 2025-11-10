@@ -4,7 +4,6 @@ import SplashScreen from "./screens/SplashScreen";
 import Onboarding from "./screens/Onboarding";
 import UserTypeSelection from "./screens/UserTypeSelection";
 import Login from "./screens/Login";
-import Registration from "./screens/Registration";
 import OTPVerification from "./screens/OTPVerification";
 import ConsumerHome from "./screens/consumer/ConsumerHome";
 import SearchBrowse from "./screens/consumer/SearchBrowse";

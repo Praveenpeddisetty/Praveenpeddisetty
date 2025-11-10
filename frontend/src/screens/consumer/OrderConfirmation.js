@@ -41,7 +41,7 @@ const OrderConfirmation = () => {
             </div>
             <div style={styles.summaryInfo}>
               <p style={styles.summaryLabel}>Design</p>
-              <p style={styles.summaryValue} data-testid="design-name"}>{design}</p>
+              <p style={styles.summaryValue} data-testid="design-name">{design}</p>
             </div>
           </div>
 

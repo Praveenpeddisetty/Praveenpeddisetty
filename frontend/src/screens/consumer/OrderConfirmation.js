@@ -61,7 +61,7 @@ const OrderConfirmation = () => {
             </div>
             <div style={styles.summaryInfo}>
               <p style={styles.summaryLabel}>Amount Paid</p>
-              <p style={styles.summaryValue} data-testid="amount"}>₹{amount.toLocaleString()}</p>
+              <p style={styles.summaryValue} data-testid="amount">₹{amount.toLocaleString()}</p>
             </div>
           </div>
 

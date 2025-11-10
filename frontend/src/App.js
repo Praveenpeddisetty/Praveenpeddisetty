@@ -29,7 +29,6 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/user-type" element={<UserTypeSelection />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
           <Route path="/otp-verify" element={<OTPVerification />} />
           
           {/* Consumer Routes */}

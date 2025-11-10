@@ -144,7 +144,7 @@ const OrderCustomization = () => {
           <div style={styles.priceDivider} />
           <div style={styles.priceRow}>
             <span style={styles.totalLabel}>Total Amount</span>
-            <span style={styles.totalValue} data-testid="total-amount"}>₹{Math.round(totalAmount).toLocaleString()}</span>
+            <span style={styles.totalValue} data-testid="total-amount">₹{Math.round(totalAmount).toLocaleString()}</span>
           </div>
         </div>
 

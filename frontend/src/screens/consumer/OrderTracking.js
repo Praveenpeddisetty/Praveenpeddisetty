@@ -35,7 +35,7 @@ const OrderTracking = () => {
         {/* Order Number */}
         <div style={styles.orderNumberBox}>
           <p style={styles.orderNumberLabel}>Order Number</p>
-          <h2 style={styles.orderNumber} data-testid="order-number"}>{order.id}</h2>
+          <h2 style={styles.orderNumber} data-testid="order-number">{order.id}</h2>
         </div>
 
         {/* Status Timeline */}

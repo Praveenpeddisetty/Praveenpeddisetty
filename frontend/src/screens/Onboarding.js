@@ -12,7 +12,9 @@ const Onboarding = () => {
 
   const slides = [
     {
-      icon: <Gem size={80} />,
+      icon: null,
+      isLogo: true,
+      logoUrl: 'https://customer-assets.emergentagent.com/job_gehna-market/artifacts/p1l2w6wo_GG%20Logo.png',
       title: 'Welcome to Golden Gehna',
       description: 'Discover exquisite handcrafted gold jewelry from skilled artisans across the country',
     },

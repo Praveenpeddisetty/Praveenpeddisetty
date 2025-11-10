@@ -43,7 +43,7 @@ const ChatScreen = () => {
           style={styles.workerImage}
         />
         <div style={styles.headerInfo}>
-          <h3 style={styles.workerName} data-testid="worker-name"}>{worker.name}</h3>
+          <h3 style={styles.workerName} data-testid="worker-name">{worker.name}</h3>
           <p style={styles.status}>Online</p>
         </div>
         <div style={styles.headerActions}>

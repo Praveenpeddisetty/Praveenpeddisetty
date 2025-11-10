@@ -92,7 +92,7 @@ const OTPVerification = () => {
           <p style={styles.subtitle} data-testid="otp-subtitle">
             We've sent a verification code to
           </p>
-          <p style={styles.phoneNumber} data-testid="phone-number">+91 98765 43210</p>
+          <p style={styles.phoneNumber} data-testid="phone-number">+91 {phone}</p>
         </div>
 
         <div style={styles.otpContainer}>
@@ -111,6 +111,16 @@ const OTPVerification = () => {
               data-testid={`otp-input-${index}`}
             />
           ))}
+        </div>
+
+        {error && (
+          <p style={styles.errorText} data-testid="error-message">{error}</p>
+        )}
+
+        <div style={styles.testInfo}>
+          <p style={styles.testInfoText}>
+            For testing, use OTP: <strong>123456</strong>
+          </p>
         </div>
 
         <div style={styles.timerSection}>

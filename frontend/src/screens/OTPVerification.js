@@ -223,6 +223,26 @@ const styles = {
     outline: 'none',
     transition: 'border-color 0.2s',
   },
+  errorText: {
+    color: '#e74c3c',
+    fontSize: '14px',
+    textAlign: 'center',
+    marginTop: '12px',
+  },
+  testInfo: {
+    background: '#e8f5f1',
+    border: '1px solid #14ac84',
+    borderRadius: '8px',
+    padding: '12px',
+    marginTop: '16px',
+    marginBottom: '16px',
+  },
+  testInfoText: {
+    fontSize: '13px',
+    color: '#333',
+    textAlign: 'center',
+    margin: 0,
+  },
   timerSection: {
     marginBottom: '32px',
   },

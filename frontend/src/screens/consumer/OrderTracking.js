@@ -96,7 +96,7 @@ const OrderTracking = () => {
         {/* Expected Delivery */}
         <div style={styles.deliveryBox}>
           <p style={styles.deliveryLabel}>Expected Delivery</p>
-          <p style={styles.deliveryDate} data-testid="expected-date"}>{order.expectedDate}</p>
+          <p style={styles.deliveryDate} data-testid="expected-date">{order.expectedDate}</p>
         </div>
 
         {/* Worker Card */}

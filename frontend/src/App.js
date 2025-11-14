@@ -40,7 +40,7 @@ function App() {
           <Route path="/search" element={<SearchBrowse />} />
           <Route path="/filter" element={<FilterScreen />} />
           <Route path="/design/:id" element={<DesignDetail />} />
-          <Route path="/worker/:id" element={<WorkerProfile />} />
+          <Route path="/worker/:id" element={<ArtisanProfile />} />
           <Route path="/customize/:id" element={<OrderCustomization />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="/my-orders" element={<MyOrders />} />

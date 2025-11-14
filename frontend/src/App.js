@@ -19,6 +19,10 @@ import Wishlist from "./screens/consumer/Wishlist";
 import RateReview from "./screens/consumer/RateReview";
 import Notifications from "./screens/consumer/Notifications";
 import ConsumerProfile from "./screens/consumer/ConsumerProfile";
+import WorkerDashboard from "./screens/worker/WorkerDashboard";
+import WorkerOrders from "./screens/worker/WorkerOrders";
+import WorkerOrderDetail from "./screens/worker/WorkerOrderDetail";
+import WorkerProfile from "./screens/worker/WorkerProfile";
 
 function App() {
   return (

@@ -9,7 +9,7 @@ import ConsumerHome from "./screens/consumer/ConsumerHome";
 import SearchBrowse from "./screens/consumer/SearchBrowse";
 import FilterScreen from "./screens/consumer/FilterScreen";
 import DesignDetail from "./screens/consumer/DesignDetail";
-import WorkerProfile from "./screens/consumer/WorkerProfile";
+import ArtisanProfile from "./screens/consumer/WorkerProfile";
 import OrderCustomization from "./screens/consumer/OrderCustomization";
 import OrderConfirmation from "./screens/consumer/OrderConfirmation";
 import MyOrders from "./screens/consumer/MyOrders";

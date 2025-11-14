@@ -62,11 +62,17 @@ const OTPVerification = () => {
   const handleVerify = () => {
     const enteredOtp = otp.join('');
     
-    if (enteredOtp === CORRECT_OTP) {
-      // OTP verified successfully, navigate to consumer home
+    // Check OTP based on user type
+    if (userType === 'worker' && enteredOtp === WORKER_OTP) {
+      // Worker login - navigate to worker dashboard
+      navigate('/worker/dashboard');
+    } else if (userType === 'consumer' && enteredOtp === CONSUMER_OTP) {
+      // Consumer login - navigate to consumer home
       navigate('/consumer-home');
     } else {
-      setError('Invalid OTP. Please try again. (Use 123456 for testing)');
+      // Invalid OTP
+      const correctOtp = userType === 'worker' ? WORKER_OTP : CONSUMER_OTP;
+      setError(`Invalid OTP. Please try again. (Use ${correctOtp} for ${userType} testing)`);
     }
   };
 

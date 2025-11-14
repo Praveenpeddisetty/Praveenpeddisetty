@@ -128,7 +128,11 @@ const OTPVerification = () => {
 
         <div style={styles.testInfo}>
           <p style={styles.testInfoText}>
-            For testing, use OTP: <strong>123456</strong>
+            For testing, use OTP: <strong>{userType === 'worker' ? '223344' : '123456'}</strong>
+            <br />
+            <span style={{ fontSize: '12px', color: '#666' }}>
+              ({userType === 'worker' ? 'Worker' : 'Consumer'} Login)
+            </span>
           </p>
         </div>
 

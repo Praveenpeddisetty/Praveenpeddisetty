@@ -12,7 +12,7 @@ const UserTypeSelection = () => {
       description: 'Browse and purchase exquisite gold jewelry',
     },
     {
-      type: 'artisan',
+      type: 'worker',
       title: 'Gold Worker/Artisan',
       icon: <Hammer size={48} />,
       description: 'Showcase and sell your handcrafted creations',

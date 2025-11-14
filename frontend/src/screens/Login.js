@@ -9,8 +9,10 @@ const Login = () => {
   const handleSendOTP = (e) => {
     e.preventDefault();
     if (phone.length >= 10) {
-      // Navigate to OTP verification with phone number
-      navigate('/otp-verify', { state: { phone } });
+      // Get user type from location state (from user type selection)
+      const userType = location.state?.userType || 'consumer';
+      // Navigate to OTP verification with phone number and user type
+      navigate('/otp-verify', { state: { phone, userType } });
     }
   };
 

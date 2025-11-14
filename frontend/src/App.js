@@ -23,6 +23,11 @@ import WorkerDashboard from "./screens/worker/WorkerDashboard";
 import WorkerOrders from "./screens/worker/WorkerOrders";
 import WorkerOrderDetail from "./screens/worker/WorkerOrderDetail";
 import WorkerProfile from "./screens/worker/WorkerProfile";
+import MyDesigns from "./screens/worker/MyDesigns";
+import UploadDesign from "./screens/worker/UploadDesign";
+import WorkerAnalytics from "./screens/worker/WorkerAnalytics";
+import EditWorkerProfile from "./screens/worker/EditWorkerProfile";
+import ShopDetails from "./screens/worker/ShopDetails";
 
 function App() {
   return (

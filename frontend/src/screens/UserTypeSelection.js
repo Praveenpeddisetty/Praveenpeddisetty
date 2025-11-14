@@ -42,7 +42,7 @@ const UserTypeSelection = () => {
             <div
               key={userType.type}
               style={styles.card}
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/login', { state: { userType: userType.type } })}
               data-testid={`${userType.type}-card`}
             >
               <div style={styles.iconWrapper}>{userType.icon}</div>

@@ -6,12 +6,15 @@ const OTPVerification = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const phone = location.state?.phone || '98765 43210';
+  const userType = location.state?.userType || 'consumer';
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [timer, setTimer] = useState(45);
   const [error, setError] = useState('');
   const inputRefs = useRef([]);
 
-  const CORRECT_OTP = '123456'; // Default OTP for testing
+  // Different OTPs for different user types
+  const CONSUMER_OTP = '123456';
+  const WORKER_OTP = '223344';
 
   useEffect(() => {
     // Start countdown timer

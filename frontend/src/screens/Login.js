@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Phone } from 'lucide-react';
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [phone, setPhone] = useState('');
 
   const handleSendOTP = (e) => {

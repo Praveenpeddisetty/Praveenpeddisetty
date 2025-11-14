@@ -61,6 +61,11 @@ function App() {
           <Route path="/worker/orders" element={<WorkerOrders />} />
           <Route path="/worker/order-detail/:id" element={<WorkerOrderDetail />} />
           <Route path="/worker/profile" element={<WorkerProfile />} />
+          <Route path="/worker/my-designs" element={<MyDesigns />} />
+          <Route path="/worker/upload-design" element={<UploadDesign />} />
+          <Route path="/worker/analytics" element={<WorkerAnalytics />} />
+          <Route path="/worker/edit-profile" element={<EditWorkerProfile />} />
+          <Route path="/worker/shop-details" element={<ShopDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

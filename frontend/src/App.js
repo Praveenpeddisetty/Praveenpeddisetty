@@ -50,6 +50,12 @@ function App() {
           <Route path="/rate-review/:id" element={<RateReview />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/consumer-profile" element={<ConsumerProfile />} />
+          
+          {/* Worker Routes */}
+          <Route path="/worker/dashboard" element={<WorkerDashboard />} />
+          <Route path="/worker/orders" element={<WorkerOrders />} />
+          <Route path="/worker/order-detail/:id" element={<WorkerOrderDetail />} />
+          <Route path="/worker/profile" element={<WorkerProfile />} />
         </Routes>
       </BrowserRouter>
     </div>

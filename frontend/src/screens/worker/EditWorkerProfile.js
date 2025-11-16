@@ -6,6 +6,7 @@ import { workerProfile } from '../../data/workerMockData';
 const EditWorkerProfile = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
+    username: workerProfile.username || '',
     firstName: workerProfile.name.split(' ')[0],
     lastName: workerProfile.name.split(' ')[1],
     email: workerProfile.email,
@@ -15,6 +16,21 @@ const EditWorkerProfile = () => {
     experience: workerProfile.experience,
     bio: workerProfile.bio,
   });
+  const [usernameError, setUsernameError] = useState('');
+
+  const handleUsernameChange = (e) => {
+    let value = e.target.value;
+    // Only allow letters, convert to lowercase, and limit to 6 characters
+    value = value.replace(/[^a-zA-Z]/g, '').toLowerCase().slice(0, 6);
+    setFormData({ ...formData, username: value });
+    
+    // Validate username
+    if (value.length > 0 && value.length < 3) {
+      setUsernameError('Username must be at least 3 letters');
+    } else {
+      setUsernameError('');
+    }
+  };
 
   const handleSave = () => {
     // Save logic

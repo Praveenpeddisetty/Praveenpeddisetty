@@ -73,6 +73,39 @@ const EditWorkerProfile = () => {
           <h3 style={styles.sectionTitle}>Personal Information</h3>
           
           <div className="input-group">
+            <label className="input-label">Username (3-6 letters only)</label>
+            <input
+              type="text"
+              className="input-field"
+              value={formData.username}
+              onChange={handleUsernameChange}
+              placeholder="e.g. rajesh"
+              maxLength={6}
+              data-testid="username-input"
+              style={{
+                ...styles.usernameInput,
+                borderColor: usernameError ? '#e74c3c' : '#e0e0e0',
+              }}
+            />
+            <div style={styles.usernameHelper}>
+              <span style={styles.charCount}>
+                {formData.username.length}/6 characters
+              </span>
+              {formData.username && (
+                <span style={styles.usernamePreview}>
+                  @{formData.username}
+                </span>
+              )}
+            </div>
+            {usernameError && (
+              <p style={styles.errorText}>{usernameError}</p>
+            )}
+            <p style={styles.hintText}>
+              Your unique username for your shop profile. Only lowercase letters allowed.
+            </p>
+          </div>
+
+          <div className="input-group">
             <label className="input-label">First Name</label>
             <input
               type="text"

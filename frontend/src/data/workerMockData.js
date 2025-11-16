@@ -3,6 +3,7 @@
 export const workerProfile = {
   id: 1,
   name: 'Rajesh Kumar',
+  username: 'rajesh',
   email: 'rajesh.kumar@example.com',
   phone: '+91 98765 43210',
   businessName: 'Kumar Jewellers',

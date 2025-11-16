@@ -108,6 +108,18 @@ const WorkerOrderDetail = () => {
           </div>
         </div>
 
+        {/* Request Payment */}
+        <div style={styles.section}>
+          <button
+            className="btn-primary"
+            style={styles.requestPaymentButton}
+            onClick={() => navigate(`/worker/request-payment/${order.id}`)}
+            data-testid="request-payment-button"
+          >
+            Request Payment from Customer
+          </button>
+        </div>
+
         {/* Add Update */}
         <div style={styles.section}>
           <h3 style={styles.sectionTitle}>Add Update</h3>

@@ -298,6 +298,38 @@ const styles = {
     minHeight: '100px',
     resize: 'vertical',
   },
+  usernameInput: {
+    fontFamily: 'monospace',
+    fontSize: '16px',
+    fontWeight: '500',
+  },
+  usernameHelper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: '8px',
+  },
+  charCount: {
+    fontSize: '12px',
+    color: '#999',
+  },
+  usernamePreview: {
+    fontSize: '14px',
+    fontWeight: '600',
+    color: '#13549d',
+    fontFamily: 'monospace',
+  },
+  errorText: {
+    fontSize: '12px',
+    color: '#e74c3c',
+    marginTop: '4px',
+  },
+  hintText: {
+    fontSize: '12px',
+    color: '#666',
+    marginTop: '4px',
+    lineHeight: '1.4',
+  },
   footer: {
     position: 'fixed',
     bottom: 0,

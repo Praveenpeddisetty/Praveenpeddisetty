@@ -25,6 +25,9 @@ const WorkerProfile = () => {
             </button>
           </div>
           <h2 style={styles.profileName}>{workerProfile.name}</h2>
+          {workerProfile.username && (
+            <p style={styles.profileUsername}>@{workerProfile.username}</p>
+          )}
           <p style={styles.profileSpecialty}>{workerProfile.specialty}</p>
           <p style={styles.profileEmail}>{workerProfile.email}</p>
           <p style={styles.profilePhone}>{workerProfile.phone}</p>

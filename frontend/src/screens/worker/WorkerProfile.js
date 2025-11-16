@@ -182,6 +182,13 @@ const styles = {
     color: 'white',
     marginBottom: '4px',
   },
+  profileUsername: {
+    fontSize: '16px',
+    fontWeight: '500',
+    color: 'rgba(255,255,255,0.8)',
+    fontFamily: 'monospace',
+    marginBottom: '8px',
+  },
   profileSpecialty: {
     fontSize: '15px',
     color: 'rgba(255,255,255,0.9)',
